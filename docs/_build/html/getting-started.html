@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; X1 Controller Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="X1 Control Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> X1 Controller Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connections-and-pinout">Connections and Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-xctrl">Installing <code class="code docutils literal notranslate"><span class="pre">xctrl</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-x1">Connecting to X1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-limits-optional">Setting Limits (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-and-encoder-configuration-optional">Motor and Encoder Configuration (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration-necessary">Calibration (necessary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operation">Operation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">X1 Controller Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/getting-started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#hardware-requirements" id="id1">Hardware Requirements</a></p></li>
+<li><p><a class="reference internal" href="#connections-and-pinout" id="id2">Connections and Pinout</a></p></li>
+<li><p><a class="reference internal" href="#installing-xctrl" id="id3">Installing <code class="code docutils literal notranslate"><span class="pre">xctrl</span></code></a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-x1" id="id4">Connecting to X1</a></p></li>
+<li><p><a class="reference internal" href="#setting-limits-optional" id="id5">Setting Limits (optional)</a></p></li>
+<li><p><a class="reference internal" href="#motor-and-encoder-configuration-optional" id="id6">Motor and Encoder Configuration (optional)</a></p></li>
+<li><p><a class="reference internal" href="#calibration-necessary" id="id7">Calibration (necessary)</a></p></li>
+<li><p><a class="reference internal" href="#operation" id="id8">Operation</a></p></li>
+</ul>
+</div>
+<section id="hardware-requirements">
+<h2><a class="toc-backref" href="#id1">Hardware Requirements</a><a class="headerlink" href="#hardware-requirements" title="Permalink to this headline"></a></h2>
+<p><strong>To start using X Controller, you need</strong></p>
+<ul class="simple">
+<li><p>One or two <a class="reference external" href="https://en.wikipedia.org/wiki/Brushless_DC_electric_motor">brushless motors</a>.</p></li>
+<li><p>One or two encoders. We do provide encoders along with the X1 controller but you are also free to use your own encoder.</p></li>
+<li><p>A 6V-48V DC input power supply or a battery.</p></li>
+</ul>
+</section>
+<section id="connections-and-pinout">
+<h2><a class="toc-backref" href="#id2">Connections and Pinout</a><a class="headerlink" href="#connections-and-pinout" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Connect the brushless motor phases to the UVW terminals.</p></li>
+<li><p>Connect your power supply unit or battery to the positive and negative terminals.</p></li>
+<li><p>Connect the encoder to the corresponding encoder pins.</p></li>
+</ul>
+</section>
+<section id="installing-xctrl">
+<span id="install-xctrl"></span><h2><a class="toc-backref" href="#id3">Installing <code class="code docutils literal notranslate"><span class="pre">xctrl</span></code></a><a class="headerlink" href="#installing-xctrl" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">macOS</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Linux</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>We are going to run the following commands for installation in Terminal.</p>
+<ol class="arabic">
+<li><p>If you don’t already have it, install homebrew:</p>
+<blockquote>
+<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install python:</p>
+<blockquote>
+<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>brew install python
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install libusb:</p>
+<blockquote>
+<div><p>libusb is required for xctrl to communicate with X1 controller:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>brew install libusb
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li id="installxctrl"><p>Install xctrl:</p>
+<blockquote>
+<div><p>Now that you have Python 3 and all the package managers, run:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>pip3 install --upgrade xctrl
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Install Python 3</a>.</p>
+<blockquote>
+<div><p>For example, on Ubuntu, run</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3 python3-pip
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install xctrl by opening a terminal and typing</p>
+<blockquote>
+<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>sudo pip3 install --upgrade xctrl
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></div>
+</section>
+<section id="connecting-to-x1">
+<h2><a class="toc-backref" href="#id4">Connecting to X1</a><a class="headerlink" href="#connecting-to-x1" title="Permalink to this headline"></a></h2>
+<p>Each X1 controller comes with a unique name, written in white on the bottom corner of your X1.</p>
+<p>After importing the xctrl library in your code, in order to connect to your X1, call <code class="code docutils literal notranslate"><span class="pre">xctrl.scan()</span></code>. This will automatically detect and
+ping all X1’s connected to your computer over USB. <code class="code docutils literal notranslate"><span class="pre">scan()</span></code> automatically creates a Python XCtrl object
+for every connceted X1 controller. For instance, <code class="code docutils literal notranslate"><span class="pre">xctrl0</span> <span class="pre">=</span> <span class="pre">xctrl.scan()[0]</span></code> would assign to <code class="code docutils literal notranslate"><span class="pre">xctrl0</span></code> the XCtrl object correponding to the first X1 Controller connect to your device.</p>
+</section>
+<section id="setting-limits-optional">
+<h2><a class="toc-backref" href="#id5">Setting Limits (optional)</a><a class="headerlink" href="#setting-limits-optional" title="Permalink to this headline"></a></h2>
+<p>This part is optional. By default, your X1 controller is set to conservative limits
+of 1A current limit and 1 turn/sec velocity limit. These serve to protect you and
+your setup during inital configuration. During operation, you will need to modify
+these limits to suit your use case.</p>
+<ul class="simple">
+<li><p>To modify the limits, you can use <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_limit(limit_name,</span> <span class="pre">limit_value)</span></code>. The available options you can use as <code class="code docutils literal notranslate"><span class="pre">limit_name</span></code> are <code class="code docutils literal notranslate"><span class="pre">&quot;current&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;velocity&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;undervoltage&quot;</span></code> and <code class="code docutils literal notranslate"><span class="pre">&quot;overvoltage&quot;</span></code>.</p></li>
+</ul>
+</section>
+<section id="motor-and-encoder-configuration-optional">
+<h2><a class="toc-backref" href="#id6">Motor and Encoder Configuration (optional)</a><a class="headerlink" href="#motor-and-encoder-configuration-optional" title="Permalink to this headline"></a></h2>
+<p>By default, your X1 controllor is (arbitaraily) configured for an Aerodrive SK3 270 KV motor with an AMT 102-V encoder set to X ppr (provided with your X1 controller)</p>
+<p>Motor and Encoder configuration involves three variables:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">motor_torque_constant</span> <span class="pre">#</span> <span class="pre">torque</span> <span class="pre">constant</span> <span class="pre">meausred</span> <span class="pre">in</span> <span class="pre">Nm</span> <span class="pre">/</span> <span class="pre">A</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">motor_pole_pairs</span> <span class="pre">#</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">meagnetic</span> <span class="pre">pole</span> <span class="pre">pairs</span> <span class="pre">on</span> <span class="pre">your</span> <span class="pre">motor</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">encoder_ppr</span> <span class="pre">#</span> <span class="pre">pulses</span> <span class="pre">per</span> <span class="pre">revolution</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">encoder</span></code></p></li>
+</ul>
+<p>Motor and Encoder configuration will improve accuracy of velocity, position, and torque measurements,
+but is not stricly necessary for initial setup or testing.</p>
+<p>If you wish to configure any of the above values, use the following functions:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_torque_constant(motor_torque_constant)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_poles(motor_num_pole_pairs)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_encoder_ppr(encoder_ppr)</span></code></p></li>
+</ul>
+<p>Note that even if you don’t configure these variables, the motor will behave stably, however the units for torque, velocity, and position input may be incorrect (ie. the motor may spin twice as fast as you expct if the encoder ppr is sent to twice its actual value)</p>
+</section>
+<section id="calibration-necessary">
+<h2><a class="toc-backref" href="#id7">Calibration (necessary)</a><a class="headerlink" href="#calibration-necessary" title="Permalink to this headline"></a></h2>
+<p>For your convenience, the calibration process is consolidated into a single step. All
+you need to do is to call the <code class="code docutils literal notranslate"><span class="pre">xctrl0.calibrate()</span></code> function and wait for the calibration to
+be done. During calibration, your X1 controller measures encoder and motor properties such as
+encoder offset, index position, motor phase resistance and inductance.</p>
+<ul class="simple">
+<li><p>Note: It is dangerous to operate X1 without calibration, however your X1 controller will not stop you</p></li>
+<li><p>Calibration is not required on startup so that you only need to calibrate one time (when you install a new motor)</p></li>
+<li><p>Do not switch motors or encoder mounting without recalibrating</p></li>
+</ul>
+</section>
+<section id="operation">
+<h2><a class="toc-backref" href="#id8">Operation</a><a class="headerlink" href="#operation" title="Permalink to this headline"></a></h2>
+<p>Now your are ready to operate your motor with your X1 controller!
+Controlling motors with your X1 involves 2 steps: setting the control mode and inputting a value.</p>
+<ul class="simple">
+<li><p>Pick a control mode with <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_mode(mode)</span></code>, where mode can be one of <code class="code docutils literal notranslate"><span class="pre">&quot;position&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;velocity&quot;</span></code> or <code class="code docutils literal notranslate"><span class="pre">&quot;torque&quot;</span></code>.</p></li>
+<li><p>Input a control value, use one of <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_position(mode)</span></code>, <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_velocity(mode)</span></code> or <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_position(mode)</span></code>, depending on which of the control mode the X1 controller is set to.</p></li>
+<li><p>For position control, the default unit used by X1 controller is radians. Noted that if you want the position to match the radians input, you might need to go back and correctly configure the controller with the specific motor specifications.</p></li>
+<li><p>For velocity control, the default unit used by X1 controller is radians/second. Similar to position control, configuring the controller is only needed if you want the velocity of the motor to be exact.</p></li>
+<li><p>For torque control, the default unit used by X1 controller is Nm (Newton-metre). Similar to above, configuring the controller is only needed if you want the torque of the motor to be exact.</p></li>
+<li><p>Sending more than 100 commands per second is not reccomended</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="X1 Control Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Precision Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
