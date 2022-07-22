@@ -10,15 +10,15 @@ Hardware Requirements
 --------------------------------------------------------------------------------
 **To start using X Controller, you need**
 
-* One or two `brushless motors <https://en.wikipedia.org/wiki/Brushless_DC_electric_motor>`__.
-* One or two encoders. We do provide encoders along with the X1 controller but you are also free to use your own encoder.
+* One `brushles motor <https://en.wikipedia.org/wiki/Brushless_DC_electric_motor>`__.
+* One encoder. We provide (and reccomend) an AMT 102-V encoder with your X1.
 * A 6V-48V DC input power supply or a battery. 
 
 Connections and Pinout
 --------------------------------------------------------------------------------
-* Connect the brushless motor phases to the UVW terminals.
-* Connect your power supply unit or battery to the positive and negative terminals.
-* Connect the encoder to the corresponding encoder pins.
+* Solder the brushless motor power leads to the U,V, and W terminals on the X1.
+* Solder your power supply or battery to the positive and negative terminals on the X1.
+* Connect the encoder to the corresponding encoder pins. Use the included wiring harness if using the included encoder.
 
 .. _install-xctrl:
 
