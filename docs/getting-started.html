@@ -51,9 +51,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#connections-and-pinout">Connections and Pinout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-xctrl">Installing <code class="code docutils literal notranslate"><span class="pre">xctrl</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#connecting-to-x1">Connecting to X1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#setting-limits-optional">Setting Limits (optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#motor-and-encoder-configuration-optional">Motor and Encoder Configuration (optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calibration-necessary">Calibration (necessary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-setting-limits">(optional) Setting Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-and-encoder-configuration">Motor and Encoder Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#operation">Operation</a></li>
 </ul>
 </li>
@@ -91,10 +90,9 @@
 <li><p><a class="reference internal" href="#connections-and-pinout" id="id2">Connections and Pinout</a></p></li>
 <li><p><a class="reference internal" href="#installing-xctrl" id="id3">Installing <code class="code docutils literal notranslate"><span class="pre">xctrl</span></code></a></p></li>
 <li><p><a class="reference internal" href="#connecting-to-x1" id="id4">Connecting to X1</a></p></li>
-<li><p><a class="reference internal" href="#setting-limits-optional" id="id5">Setting Limits (optional)</a></p></li>
-<li><p><a class="reference internal" href="#motor-and-encoder-configuration-optional" id="id6">Motor and Encoder Configuration (optional)</a></p></li>
-<li><p><a class="reference internal" href="#calibration-necessary" id="id7">Calibration (necessary)</a></p></li>
-<li><p><a class="reference internal" href="#operation" id="id8">Operation</a></p></li>
+<li><p><a class="reference internal" href="#optional-setting-limits" id="id5">(optional) Setting Limits</a></p></li>
+<li><p><a class="reference internal" href="#motor-and-encoder-configuration" id="id6">Motor and Encoder Configuration</a></p></li>
+<li><p><a class="reference internal" href="#operation" id="id7">Operation</a></p></li>
 </ul>
 </div>
 <section id="hardware-requirements">
@@ -176,8 +174,8 @@
 ping all X1’s connected to your computer over USB. <code class="code docutils literal notranslate"><span class="pre">scan()</span></code> automatically creates a Python XCtrl object
 for every connceted X1 controller. For instance, <code class="code docutils literal notranslate"><span class="pre">xctrl0</span> <span class="pre">=</span> <span class="pre">xctrl.scan()[0]</span></code> would assign to <code class="code docutils literal notranslate"><span class="pre">xctrl0</span></code> the XCtrl object correponding to the first X1 Controller connect to your device.</p>
 </section>
-<section id="setting-limits-optional">
-<h2><a class="toc-backref" href="#id5">Setting Limits (optional)</a><a class="headerlink" href="#setting-limits-optional" title="Permalink to this headline"></a></h2>
+<section id="optional-setting-limits">
+<h2><a class="toc-backref" href="#id5">(optional) Setting Limits</a><a class="headerlink" href="#optional-setting-limits" title="Permalink to this headline"></a></h2>
 <p>This part is optional. By default, your X1 controller is set to conservative limits
 of 1A current limit and 1 turn/sec velocity limit. These serve to protect you and
 your setup during inital configuration. During operation, you will need to modify
@@ -186,28 +184,26 @@ these limits to suit your use case.</p>
 <li><p>To modify the limits, you can use <code class="code docutils literal notranslate"><span class="pre">xctrl0.set_limit(limit_name,</span> <span class="pre">limit_value)</span></code>. The available options you can use as <code class="code docutils literal notranslate"><span class="pre">limit_name</span></code> are <code class="code docutils literal notranslate"><span class="pre">&quot;current&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;velocity&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;undervoltage&quot;</span></code> and <code class="code docutils literal notranslate"><span class="pre">&quot;overvoltage&quot;</span></code>.</p></li>
 </ul>
 </section>
-<section id="motor-and-encoder-configuration-optional">
-<h2><a class="toc-backref" href="#id6">Motor and Encoder Configuration (optional)</a><a class="headerlink" href="#motor-and-encoder-configuration-optional" title="Permalink to this headline"></a></h2>
-<p>By default, your X1 controllor is (arbitaraily) configured for an Aerodrive SK3 270 KV motor with an AMT 102-V encoder set to X ppr (provided with your X1 controller)</p>
+<section id="motor-and-encoder-configuration">
+<h2><a class="toc-backref" href="#id6">Motor and Encoder Configuration</a><a class="headerlink" href="#motor-and-encoder-configuration" title="Permalink to this headline"></a></h2>
+<p>By default, your X1 controllor is (arbitaraily) configured for an Aerodrive SK3 270 KV motor with an AMT 102-V encoder set to 8192 ppr (provided with your X1 controller)</p>
 <p>Motor and Encoder configuration involves three variables:</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">motor_torque_constant</span> <span class="pre">#</span> <span class="pre">torque</span> <span class="pre">constant</span> <span class="pre">meausred</span> <span class="pre">in</span> <span class="pre">Nm</span> <span class="pre">/</span> <span class="pre">A</span></code></p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">motor_pole_pairs</span> <span class="pre">#</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">meagnetic</span> <span class="pre">pole</span> <span class="pre">pairs</span> <span class="pre">on</span> <span class="pre">your</span> <span class="pre">motor</span></code></p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">encoder_ppr</span> <span class="pre">#</span> <span class="pre">pulses</span> <span class="pre">per</span> <span class="pre">revolution</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">encoder</span></code></p></li>
 </ul>
-<p>Motor and Encoder configuration will improve accuracy of velocity, position, and torque measurements,
-but is not stricly necessary for initial setup or testing.</p>
-<p>If you wish to configure any of the above values, use the following functions:</p>
+<p>Torque constant configuration is optional. Motor pole pair configuration is necessary. Encoder PPR comes pre configured so long as you use the included AMT 102-V encoder</p>
+<p>To configure any of the above values, use the following functions:</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_torque_constant(motor_torque_constant)</span></code></p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_poles(motor_num_pole_pairs)</span></code></p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">xctrl0.set_encoder_ppr(encoder_ppr)</span></code></p></li>
 </ul>
-<p>Note that even if you don’t configure these variables, the motor will behave stably, however the units for torque, velocity, and position input may be incorrect (ie. the motor may spin twice as fast as you expct if the encoder ppr is sent to twice its actual value)</p>
-</section>
-<section id="calibration-necessary">
-<h2><a class="toc-backref" href="#id7">Calibration (necessary)</a><a class="headerlink" href="#calibration-necessary" title="Permalink to this headline"></a></h2>
-<p>For your convenience, the calibration process is consolidated into a single step. All
+<p>``
+Calibration
+——————————————————————————–
+For your convenience, the calibration process is consolidated into a single step. All
 you need to do is to call the <code class="code docutils literal notranslate"><span class="pre">xctrl0.calibrate()</span></code> function and wait for the calibration to
 be done. During calibration, your X1 controller measures encoder and motor properties such as
 encoder offset, index position, motor phase resistance and inductance.</p>
@@ -218,7 +214,7 @@ encoder offset, index position, motor phase resistance and inductance.</p>
 </ul>
 </section>
 <section id="operation">
-<h2><a class="toc-backref" href="#id8">Operation</a><a class="headerlink" href="#operation" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Operation</a><a class="headerlink" href="#operation" title="Permalink to this headline"></a></h2>
 <p>Now your are ready to operate your motor with your X1 controller!
 Controlling motors with your X1 involves 2 steps: setting the control mode and inputting a value.</p>
 <ul class="simple">
