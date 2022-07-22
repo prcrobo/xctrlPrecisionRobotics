@@ -88,7 +88,7 @@ ping all X1's connected to your computer over USB. :code:`scan()` automatically 
 for every connceted X1 controller. For instance, :code:`xctrl0 = xctrl.scan()[0]` would assign to :code:`xctrl0` the XCtrl object correponding to the first X1 Controller connect to your device. 
 
 
-Setting Limits (optional)
+(optional) Setting Limits 
 --------------------------------------------------------------------------------
 This part is optional. By default, your X1 controller is set to conservative limits
 of 1A current limit and 1 turn/sec velocity limit. These serve to protect you and 
@@ -99,9 +99,9 @@ these limits to suit your use case.
 
 
 
-Motor and Encoder Configuration (optional)
+Motor and Encoder Configuration
 --------------------------------------------------------------------------------
-By default, your X1 controllor is (arbitaraily) configured for an Aerodrive SK3 270 KV motor with an AMT 102-V encoder set to X ppr (provided with your X1 controller)
+By default, your X1 controllor is (arbitaraily) configured for an Aerodrive SK3 270 KV motor with an AMT 102-V encoder set to 8192 ppr (provided with your X1 controller)
 
 Motor and Encoder configuration involves three variables:
 
@@ -109,18 +109,15 @@ Motor and Encoder configuration involves three variables:
 *  :code:`motor_pole_pairs # number of meagnetic pole pairs on your motor`
 *  :code:`encoder_ppr # pulses per revolution of your encoder`
 
-Motor and Encoder configuration will improve accuracy of velocity, position, and torque measurements,
-but is not stricly necessary for initial setup or testing.
+Torque constant configuration is optional. Motor pole pair configuration is necessary. Encoder PPR comes pre configured so long as you use the included AMT 102-V encoder
 
-If you wish to configure any of the above values, use the following functions:
+To configure any of the above values, use the following functions:
 
 *  :code:`xctrl0.set_torque_constant(motor_torque_constant)`
 *  :code:`xctrl0.set_poles(motor_num_pole_pairs)`
 *  :code:`xctrl0.set_encoder_ppr(encoder_ppr)`
-
-Note that even if you don't configure these variables, the motor will behave stably, however the units for torque, velocity, and position input may be incorrect (ie. the motor may spin twice as fast as you expct if the encoder ppr is sent to twice its actual value)
-
-Calibration (necessary)
+``
+Calibration
 --------------------------------------------------------------------------------
 For your convenience, the calibration process is consolidated into a single step. All 
 you need to do is to call the :code:`xctrl0.calibrate()` function and wait for the calibration to
